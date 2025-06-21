@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos de Matemática Financeira</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      display: block;
+      padding: 12px;
+      background-color: #1f1f1f;
+      color: #0ff;
+      text-decoration: none;
+      border: 1px solid #0ff;
+      border-radius: 8px;
+      transition: 0.3s;
+      text-shadow: 0 0 5px #0ff;
+    }
+
+    a:hover {
+      background-color: #0ff;
+      color: #000;
+      text-shadow: none;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .social p {
+      margin-bottom: 15px;
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+    }
+
+    .social a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #0ff;
+      text-decoration: none;
+      font-size: 20px;
+      transition: 0.3s;
+      text-shadow: 0 0 5px #0ff;
+    }
+
+    .social a:hover {
+      color: #4CAF50;
+      text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Simule, calcule e entenda a Matemática Financeira</h1>
+
+    <input type="text" id="search" placeholder="Buscar projeto...">
+
+    <ul id="lista-projetos">
+      <li><a href="https://junior670.github.io/F-rmula-de-Bhaskara/" target="_blank">Fórmula de Bhaskara</a></li>
+      <li><a href="https://junior670.github.io/1-Amortiza-o-SAA-com-pagamento-peri-dico-de-juros./" target="_blank">Amortização (SAA) com pagamento periódico de juros.</a></li>
+      <li><a href="https://junior670.github.io/1-SISTEMA-AMERICANO-DE-AMORTIZA-O-SAA-/" target="_blank">SISTEMA AMERICANO DE AMORTIZAÇÃO (SAA)</a></li>
+      <li><a href="https://junior670.github.io/2-Sistema-de-Amortiza-o-Constante-SAC-/" target="_blank">Sistema de Amortização Constante (SAC)</a></li>
+      <li><a href="https://junior670.github.io/3-Sistema-Franc-s-de-Amortiza-o-SFA-PRICE-/" target="_blank">Sistema Francês de Amortização (SFA)(PRICE)</a></li>
+      <li><a href="desconto-simples.html" target="_blank">Aguarde...</a></li>
+      <li><a href="taxa-equivalente.html" target="_blank">Aguarde...</a></li>
+      <!-- Adicione mais conforme necessário -->
+    </ul>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById("search");
+    const lista = document.getElementById("lista-projetos");
+    const itens = lista.getElementsByTagName("li");
+
+    searchInput.addEventListener("input", function () {
+      const filtro = this.value.toLowerCase();
+
+      for (let i = 0; i < itens.length; i++) {
+        const texto = itens[i].innerText.toLowerCase();
+        itens[i].style.display = texto.includes(filtro) ? "block" : "none";
+      }
+    });
+  </script>
+
+  <div class="social">
+    <p>✨ Me siga nas redes sociais:</p>
+    <a href="https://www.linkedin.com/in/junior-santos-9b930b211" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/junior670" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/junior.diego.39" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.dio.me/users/diegojr09" target="_blank"><i class="fas fa-user-graduate"></i></a>
+    <a href="https://www.dio.me/" target="_blank"><i class="fas fa-globe"></i></a>
+    <a href="https://www.youtube.com/watch?v=jVxxKYlSDNk" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+</body>
+</html>
